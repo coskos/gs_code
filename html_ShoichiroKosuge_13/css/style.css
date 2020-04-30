@@ -1,0 +1,595 @@
+/* ここから下に記載していく */
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'Helvetica Neue', Helvetica, Arial, YuGothic, 'Yu Gothic', 游ゴシック体, '游ゴシック', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, 'MS ゴシック', 'MS Gothic', sans-serif;	
+  color: #222222;
+}
+
+.wrapper{
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#header{
+  height: 122px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* なんで左揃えになるんやナビ。float right効いてない説 
+      → folatじゃなくて上記でイケた  */
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(255, 224, 84, 0.808);
+  z-index: 999;
+}
+
+.logo{
+  padding-left: 40px;
+}
+.navi{
+  width: 600px;
+  float: right;
+  margin-right: 60px;
+}
+
+.navi ul{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+
+}
+.navi li{
+  padding: 50px 25px;
+  font-size: 21px;
+}
+
+.navi li a{
+  color: #222222;
+  text-decoration:none; /* ナビリンクの下線を消した */
+}
+
+/* とりあえず先に進む、上下間隔おかしいけど */
+/* headerのwh設定してなかった */
+/* 背景画像がpタグに沿ってしまう。
+    ワイズに合わせてオリジナル高さに調整して貰う方法 */
+
+.mainvisual{
+  height: 440px;
+  /* ハイト手動でいいのか？ */
+  background: url('../img/mainbg.png') no-repeat center center;
+  background-size: cover;
+  margin: 122px auto 0;
+  color: white  ;
+  display: flex;
+  align-items: center;
+}
+
+.mainvisual .t1{
+  width: 1200px;
+  font-size: 48px;
+  margin: 0 auto;
+  text-align: center; 
+  font-weight: bold;
+}
+
+.mainvisual .t2{
+  width: 1200px;
+  font-size: 34px;
+  margin: 30px 0 auto;
+  text-align: center;
+}
+
+
+/* pタグ2つのテキストの縦中央表示は
+p要素をDIVで囲ってからflexbox＋align-items */
+
+/* common divsion start */
+
+.content{
+  text-align: center;
+  line-height: 160%;
+  /* is it OK? > line-height */
+}
+
+.title_ja{
+  font-size: 18px;
+}
+
+.text p{
+  font-size: 16px;
+  margin-top: 40px;
+}
+
+/* common divsion end */
+
+#about{
+  font-size: 24px;
+  color: #ffd61a;
+  padding-top: 181px;
+  font-weight: bold;
+  margin-top: -121px;
+}
+
+#course, #news, #access, #contact{
+  font-weight: bold;
+}
+
+.about .title_ja{
+  padding: 30px 0 20px;
+}
+
+.about_pic{
+  padding-top: 80px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  width: 1200px;
+}
+
+/* .about_pic img{
+  width: 300px;
+} */
+  /* 見本通りだと右揃え（左端がちょい切れる） */
+
+.multiple { padding-top: 80px;}
+.multiple img { width: 100%;}
+.multiple div { margin: 0 5px;}
+.multiple .slick-next { right: 17px; z-index: 100;}
+.multiple .slick-prev { left: 23px; z-index: 100;}
+.slick-track {width: 640px}
+/* course Start */
+#course{
+  padding-top: 60px;
+  font-size: 24px;
+  padding-top: 181px;
+  margin-top: -121px;
+}
+
+.course_wrapper{
+  padding-top: 60px;
+}
+
+.course_title{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.course_01 img,
+.course_02 img,
+.course_03 img{
+  vertical-align: bottom;
+}
+/* 隙間あいちゃう問題はvertical align baselineだから
+ * 「div 隙間 下」で解決
+ * https://qiita.com/kimura511/items/2fe01fe295e308ce34aa
+ */
+
+.course_01{
+  display: flex;
+  justify-content: space-between;
+  /* spacebetweenとcenterとの違いは？疑問 */
+  align-items: center;
+  background-color: #fafafa;
+}
+.course_02{
+  display: flex;
+  justify-content: space-between;
+  /* spacebetweenとcenterとの違いは？疑問 */
+  align-items: center;
+  background-color: #fafafa;
+}
+.course_03{
+  display: flex;
+  justify-content: space-between;
+  /* spacebetweenとcenterとの違いは？疑問 */
+  align-items: center;  
+  background-color: #fafafa;
+}
+
+/* imgの表示カバーサイズと縮尺を指定 */
+.img{
+  width: 600px;
+}  /* courseのimgまとめて幅指定 */
+.img img{
+  width: 100%;
+}  /* class名まとめた */
+
+/* コース写真横のタイトルのフォントサイズ調整 */
+.course_title{
+  font-size: 24px;
+  text-align: left;
+}
+
+/* コース説明文のテキストを左寄せに整形する */
+.course_text{
+  margin: 40px 0 0 0;
+  text-align: left;
+}
+
+.box01{
+  width: 480px;
+  padding-left:50px;
+}
+.box03{
+  width: 480px;
+  padding-left:50px;
+}
+.box02{
+  width: 480px;
+  padding-right:50px;
+  margin: 0 0 0 auto;
+}
+/* course End */
+
+/* news Start */
+#news{
+  padding-top: 181px;
+  margin-top: -121px;
+  color: #ffd61a;
+  font-size: 24px;
+}
+
+.news .title_ja{
+  padding-top: 30px;
+}
+
+.news_preview_area{
+  width: 1200px;
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.preview{
+  font-size: 14px;
+}
+
+.article01{
+  width: 300px;
+  padding-right: 30px;
+}
+
+.article02{
+  width: 300px;
+}
+
+.article03{  
+  width: 300px;
+  padding-left: 30px;
+}
+
+.date{
+  padding-top: 30px;
+  text-align: left;
+}
+
+.preview{
+  padding-top: 24px;
+}
+
+.thumbnail img{
+  width: 100%;
+  border-radius: 6px;
+  /* （↓）マウスオンしたときにカーソルを指にする */
+
+}
+
+.thumbnail img,
+.date p,
+.preview
+{
+  cursor: pointer;
+  /* （↓）アニメーション時間を調整 */
+  transition: all 0.3s ease 0s;
+}
+
+.thumbnail img:hover,
+.date p:hover,
+.preview:hover
+{
+    opacity: 0.6;
+}
+
+.button{
+  margin: 60px auto 60px;
+  width: 300px;
+  height: 60px;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  background-color: #ffd61a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  
+  /* （↓）マウスオンしたときにカーソルを指にする */
+  cursor: pointer;
+  /* （↓）アニメーション時間を調整 */
+  transition: all 0.3s ease 0s;
+}
+
+
+.button:hover {
+  opacity: 0.6;
+}
+
+
+
+/* news end */
+
+
+/* access start */
+
+.access{
+  background-color: #fafafa;
+}
+
+#access {
+  padding-top: 181px;
+  margin-top: -121px;
+  font-size: 24px;
+}
+
+.access .title_ja{
+  padding: 30px 0 60px;
+}
+
+.gmap_wrap{
+  position: relative;
+  width: 100%;
+  padding-top: 25%;
+}
+
+.gmap_wrap iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.table_wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0px;
+}
+/* 発見:コンマ区切りでCSSを複数要素に重ねがけ可能っぽい */
+/* 疑問:.contentのフォントサイズ非適応ナノはなぜ？ */
+
+.table_wrap table{
+  text-align: left;
+  line-height: 30px;
+  /* ん？どうやらラインハイト効いてない？ */
+  height: 50px;
+}
+
+/* tr th td は名称を覚える
+http://tmlife.net/web/html/html-tag-learn-knack.html
+ */
+/* セルの高さを50pxに設定 */
+.table_wrap table tr{
+  height: 50px;
+}
+
+/* A列とB列のテキストの左右間隔を空ける、目分量で40px */
+/* レスポンシブにし場合はうまくいくかどうかわからん */
+.table_wrap table th{
+  padding-right: 40px;
+}
+
+/* access end */
+
+/* contact start */
+
+#contact{
+  padding-top: 181px;
+  margin-top: -121px;
+  font-size: 24px;
+}
+
+.contact .title_ja{
+  padding: 30px 0;
+}
+
+.contact .text_wrap p{
+  padding-top: 30px;
+}
+
+ /* フォームCSS調整 */
+ /* 横並びにする */
+
+
+  /* width: 640px;
+  margin: 70px auto 0;
+  border-top: 3px solid #bfbfbf;
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+.form-inner {
+  width: 720px;
+  display: flex;
+  flex-wrap:wrap;
+  margin: 70px auto 40px;
+  }
+
+.form-title{
+  width: 200px;
+  padding: 0 64px 0 16px ;
+  margin-left: 0px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  border-top: 1px #bfbfbf solid;
+  border-bottom: 1px #bfbfbf solid;
+  font-weight: bold;
+}
+
+.form-item{
+  width: 400px;
+  padding: 8px 0 8px 8px;
+  text-align: left;
+  border-left: 3px #bfbfbf solid;
+  box-sizing: content-box;
+  border-top: 1px #bfbfbf solid;
+  border-bottom: 1px #bfbfbf solid;
+}
+
+.form-parts{
+  width: 100%;
+  margin: 0 auto 0 0 ;
+}
+
+.form-item select{
+  height: 36px;
+  font-size: 16px;
+}
+
+label{
+  line-height: 40px;
+  width: 390px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+
+.form-item label:hover{
+  background: linear-gradient(transparent 50%, rgb(214, 211, 48, 0.3) 50%);
+}
+/* list 初期設定だと使いづらい */
+
+input[type="text"]{
+  width: 328px;
+  height: 20px;
+}
+
+label input[type="checkbox"]{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button_submit{
+  /* （↓）マウスオンしたときにカーソルを指にする */
+  cursor: pointer;
+  /* （↓）アニメーション時間を調整 */
+  transition: all 0.3s ease 0s;
+
+  margin: 30px auto 0;
+  width: 300px;
+  height: 60px;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  background-color: #ffd61a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  border: none;
+}
+
+.button_submit:hover {
+  opacity: 0.6;
+}
+
+/* contact end */
+
+/*
+    スクロールすると表示される（ページトップ）
+*/
+
+#page-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 120%;
+}
+#page-top a {
+  background: rgb(38, 135, 246, 0.8);
+  text-decoration: none;
+  color: #fff;
+  width: 130px;
+  padding: 30px 0;
+  text-align: center;
+  display: block;
+  border-radius: 5px;
+}
+
+#page-top a:hover {
+  text-decoration: none;
+  background: rgba(121, 182, 251, 0.8);
+}
+
+/*
+    モーダルウィンドウ
+*/
+.wp_btn{
+  margin-top: 60px;
+  border-radius: 8px;
+  background-color: rgba(48, 196, 255, 0.685);
+  width: 400px;
+  padding: 30px 20px;
+  margin: 120px auto 70px auto;
+  font-size: 24px;
+}
+
+.wp_btn a{
+  font-weight: bold;
+}
+.modal{
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.modal__bg{
+  background: rgba(0,0,0,0.8);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+}
+.modal__content{
+  background: #fff;
+  left: 50%;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 60%;
+  line-height: 2em;
+  font-size: 24px;
+  font-weight: bold;
+}
+input.modal_input{
+  width: 280px;
+  height: 28px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+input.modal_submit{
+  height: 34px;
+  font-weight: bold;
+  font-size: 18px;
+}
+/* fin fotter start */
+
+#footer{
+  margin-top: 140px;
+  padding: 30px;
+  text-align: center;
+  background-color: #707070;
+  background-size: cover;
+  color: white;
+}
+
+/* fin fotter end */
